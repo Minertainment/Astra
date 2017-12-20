@@ -1,0 +1,14 @@
+name: Astra
+description: Anticheat for a block game.
+version: 0.0.1
+main: com.horizonpvp.astratra.AntiCheat
+permissions:
+  anticheat.bypass:
+    description: Bypass for all anticheat checks
+    default: op
+  anticheat.broadcast:
+    description: Receive anticheat notifications
+    default: op
+  anticheat.debug:
+    description: Receive anticheat debug messages
+    default: op
