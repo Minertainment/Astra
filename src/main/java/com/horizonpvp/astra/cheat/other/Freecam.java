@@ -9,6 +9,7 @@ import com.horizonpvp.astra.cheat.type.CheatType;
 import com.horizonpvp.astra.cheat.type.Probability;
 import com.horizonpvp.astra.util.CheckUtils;
 import com.horizonpvp.astra.util.MaterialUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
@@ -99,13 +100,6 @@ public class Freecam extends Cheat implements PacketCheat, Listener {
                 }
                 ids.put(e.getPlayer().getUniqueId(), System.currentTimeMillis());
             }
-        }
-    }
-
-    @EventHandler
-    public void lightCreeper(PlayerInteractAtEntityEvent e) {
-        if(e.getRightClicked().getType() == EntityType.CREEPER) {
-
         }
     }
 

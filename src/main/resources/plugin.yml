@@ -1,7 +1,7 @@
 name: Astra
 description: Anticheat for a block game.
 version: 0.0.1
-main: com.horizonpvp.astratra.AntiCheat
+main: com.horizonpvp.astra.AntiCheat
 permissions:
   anticheat.bypass:
     description: Bypass for all anticheat checks
