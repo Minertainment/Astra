@@ -59,6 +59,10 @@ public class Jesus extends Cheat implements Runnable, Listener {
             return;
         }
 
+        if(CheckUtils.getPing(player) >= 400) {
+            return;
+        }
+
         Integer previous = threshold.get(player.getUniqueId());
         threshold.put(player.getUniqueId(), previous == null ? 1 : previous + 1);
         if(threshold.get(player.getUniqueId()) >= 5) {

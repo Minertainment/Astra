@@ -88,6 +88,30 @@ public class ACUserManager implements Listener, Runnable {
         users.get(e.getPlayer().getUniqueId()).setLastVelocitized(System.currentTimeMillis());
     }
 
+
+    @EventHandler(
+            ignoreCancelled = true
+    )
+    public void onCommand(PlayerCommandPreprocessEvent e) {
+        //TODO make a real command
+        if(!e.getMessage().equalsIgnoreCase("/alerts")) {
+            return;
+        }
+
+        if(!e.getPlayer().hasPermission("anticheat.broadcast")) {
+            return;
+        }
+
+        e.setCancelled(true);
+        ACUser user = get(e.getPlayer().getUniqueId());
+        user.setReceieveBroadcast(!user.shouldReceiveBroadcast());
+        if(user.shouldReceiveBroadcast()) {
+            e.getPlayer().sendMessage(ChatColor.GREEN + "Enabled Astra alerts");
+        } else {
+            e.getPlayer().sendMessage(ChatColor.RED + "Disabled Astra alerts");
+        }
+    }
+
     public ACUser get(UUID id) {
         return users.get(id);
     }

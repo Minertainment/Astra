@@ -36,7 +36,6 @@ public class Freecam extends Cheat implements PacketCheat, Listener {
     @Override
     public void onEnable() {
         setDefault("block", true);
-        setDefault("notifyLight", false);
     }
 
     @Override
