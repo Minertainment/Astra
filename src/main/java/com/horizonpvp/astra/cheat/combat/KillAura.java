@@ -54,7 +54,7 @@ public class KillAura extends Cheat implements PacketCheat {
             if (packetNMS.a() != PacketPlayInUseEntity.EnumEntityUseAction.ATTACK) {
                 return;
             }
-
+            
             if (entity == null) {
                 return;
             }

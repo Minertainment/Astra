@@ -41,7 +41,6 @@ public class Angle extends Cheat implements PacketCheat {
                     Vector currentYaw = player.getLocation().getDirection();
                     float angle = perfectYaw.angle(currentYaw);
                     if (angle > getConfig().getDouble("moderate-angle", 0.1F)) {
-                        Bukkit.broadcastMessage(angle + " > " + getConfig().getDouble("moderate-angle", 0.1F));
                         fail(player, getProbabilty(angle));
                     }
                 }

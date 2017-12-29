@@ -82,8 +82,10 @@ public class Sneak extends Cheat implements Listener, PacketCheat, Runnable {
         while(iterator.hasNext()) {
             Map.Entry<UUID, Integer> entry = iterator.next();
             if (entry.getValue() > 18) {
-                if (System.currentTimeMillis() - blacklist.get(entry.getKey()) < 2000L) {
-                    return;
+                if(blacklist.containsKey(entry.getKey())) {
+                    if (System.currentTimeMillis() - blacklist.get(entry.getKey()) < 2000L) {
+                        return;
+                    }
                 }
 
                 fail(Bukkit.getPlayer(entry.getKey()), Probability.HIGH);

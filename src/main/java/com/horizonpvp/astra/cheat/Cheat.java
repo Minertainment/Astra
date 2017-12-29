@@ -15,6 +15,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 
+import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 
 public abstract class Cheat {
@@ -50,7 +51,11 @@ public abstract class Cheat {
             packetListener = new PacketAdapter(antiCheat, types) {
                 @Override
                 public void onPacketReceiving(PacketEvent event) {
-                    ((PacketCheat)Cheat.this).onPacketReceiving(event);
+                    try {
+                        ((PacketCheat) Cheat.this).onPacketReceiving(event);
+                    } catch (ConcurrentModificationException ignored) {
+
+                    }
                 }
             };
 

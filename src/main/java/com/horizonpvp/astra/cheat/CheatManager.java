@@ -26,7 +26,7 @@ public class CheatManager {
         cheatMap.put(CheatType.ANIMATION_CRASH, new Crash(antiCheat));
         cheatMap.put(CheatType.ENDERPEARL, new Enderpearl(antiCheat));
         cheatMap.put(CheatType.FAST_BOW, new FastBow(antiCheat));
-        cheatMap.put(CheatType.FAST_BREAK, new FastBreak(antiCheat));
+        //cheatMap.put(CheatType.FAST_BREAK, new FastBreak(antiCheat));
         cheatMap.put(CheatType.FAST_EAT, new FastEat(antiCheat));
         cheatMap.put(CheatType.FAST_LADDER, new FastLadder(antiCheat));
         cheatMap.put(CheatType.FLY, new Fly(antiCheat));
